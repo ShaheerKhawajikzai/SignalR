@@ -25,6 +25,8 @@ namespace SingalR.Controllers
         [HttpPost]
         public async Task<IActionResult> Notify()
         {
+
+            //Testing
             await hubContext.Clients.All.SendAsync("ReceiveNotification", "🔔 This is a live notification!");
             return RedirectToAction("Index");
         }
